@@ -13,7 +13,7 @@ import SkillDetail from "./SkillDetail";
 
 const skills = [
   {
-    label: "Languages",
+    label: "Programming languages",
     description: [
       {
         name: "Python",
@@ -68,6 +68,13 @@ const skills = [
       { name: "Linux", level: 75, icon: "", color: "" },
     ],
   },
+  {
+    label: "Languages",
+    description: [
+      { name: "Español", level: 100, icon: "", color: "red" },
+      { name: "Inglés", level: 75, icon: "", color: "blue" },
+    ],
+  },
 ];
 
 const Skills = () => {
@@ -82,9 +89,11 @@ const Skills = () => {
   };
 
   return (
-    <Paper elevation={24}>
-      <Typography variant="h3">My skills</Typography>
-      <Stepper activeStep={activeStep} orientation="vertical">
+    <Paper sx={{ maxWidth: "95%", margin: 6 }}>
+      <Typography variant="h3" sx={{ m: 3 }}>
+        Skills
+      </Typography>
+      <Stepper activeStep={activeStep} orientation="vertical" sx={{ m: 3 }}>
         {skills.map((skill, index) => (
           <Step key={skill.label}>
             <StepLabel>{skill.label}</StepLabel>
