@@ -11,11 +11,15 @@ const Landing = () => {
             <Avatar
               alt="<CCA />"
               src="../../assets/me.jpg"
-              sx={{ width: "100%", height: "100%" }}
+              sx={{
+                width: "90%",
+                height: "100%",
+                display: { xs: "none", md: "block" },
+              }}
             />
           </Grid>
           <Grid item xs={11} md={8}>
-            <Box mt={10} ml={1}>
+            <Box mt={20} ml={1}>
               <Typography
                 variant="h1"
                 sx={{ fontStyle: "bold", color: "text.primary" }}

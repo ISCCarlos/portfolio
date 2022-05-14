@@ -9,7 +9,7 @@ const experiences = [
     years: "2015 - 2016",
     description:
       "Coding and testing COBOL programs for CitiBanamex clients system.",
-    img: "",
+    img: "../../assets/icons/experience/banking.png",
     industry: "Banking",
   },
   {
@@ -18,7 +18,7 @@ const experiences = [
     years: "2016 - at present",
     description:
       "Coding and implementing systems for supply chain, working with industry leaders as Honeywell, BlueYonder and Supplynet from NetLogistik.",
-    img: "",
+    img: "../../assets/icons/experience/logistics.png",
     industry: "Logistics",
   },
 ];

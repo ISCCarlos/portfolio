@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
+import Contact from "./Contact";
 import Experience from "./Experience";
 import Landing from "./Landing";
 import Projects from "./Projects";
@@ -27,6 +28,7 @@ const Container = () => {
       <Experience />
       <Skills />
       <Projects />
+      <Contact />
     </>
   );
 };
