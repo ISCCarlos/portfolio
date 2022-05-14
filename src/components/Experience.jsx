@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@mui/material";
+import { Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import ExperienceDetail from "./ExperienceDetail";
 
@@ -29,16 +29,20 @@ const Experience = () => {
       <Typography variant="h3" sx={{ m: 3 }}>
         Experience
       </Typography>
-      {experiences.map((experience) => (
-        <ExperienceDetail
-          img={experience.img}
-          industry={experience.industry}
-          label={experience.label}
-          role={experience.role}
-          years={experience.years}
-          description={experience.description}
-        />
-      ))}
+      <Grid container>
+        {experiences.map((experience) => (
+          <Grid item xs={12} sm={4}>
+            <ExperienceDetail
+              img={experience.img}
+              industry={experience.industry}
+              label={experience.label}
+              role={experience.role}
+              years={experience.years}
+              description={experience.description}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </Paper>
   );
 };

@@ -18,14 +18,7 @@ const ExperienceDetail = ({
   description,
 }) => {
   return (
-    <Card
-      sx={{
-        maxWidth: "25%",
-        height: "450px",
-        m: 3,
-        display: "inline-block",
-      }}
-    >
+    <Card sx={{ m: 2 }}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={img} alt={industry} />
         <CardContent>
