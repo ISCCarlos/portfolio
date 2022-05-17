@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import SkillDetail from "./SkillDetail";
+import SchoolIcon from "@mui/icons-material/School";
 
 const skills = [
   {
@@ -103,6 +104,12 @@ const skills = [
         level: 50,
         icon: "../../assets/icons/skills/ionic.png",
         color: "78,142,247,0.5",
+      },
+      {
+        name: "Bootstrap",
+        level: 75,
+        icon: "../../assets/icons/skills/bootstrap.png",
+        color: "83,57,121,0.5",
       },
     ],
   },
@@ -213,7 +220,7 @@ const Skills = () => {
   return (
     <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="skills">
       <Typography variant="h3" sx={{ m: 3 }}>
-        Skills
+        <SchoolIcon /> Skills
       </Typography>
       <Stepper activeStep={activeStep} orientation="vertical" sx={{ m: 3 }}>
         {skills.map((skill, index) => (

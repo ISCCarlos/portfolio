@@ -16,6 +16,7 @@ const ExperienceDetail = ({
   role,
   years,
   description,
+  technologies,
 }) => {
   return (
     <Card sx={{ m: 2 }}>
@@ -38,7 +39,11 @@ const ExperienceDetail = ({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Chip label={industry} color="primary"></Chip>
+        <Chip
+          label={"Industry: " + industry}
+          color="primary"
+          variant="outlined"
+        />
       </CardActions>
     </Card>
   );

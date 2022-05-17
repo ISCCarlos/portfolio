@@ -1,11 +1,12 @@
 import { Paper, Typography, Box, Button } from "@mui/material";
 import React from "react";
+import MailIcon from "@mui/icons-material/Mail";
 
 const Contact = () => {
   return (
     <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="contact">
       <Typography variant="h3" sx={{ m: 3 }}>
-        Contact
+        <MailIcon /> Contact
       </Typography>
 
       <Box

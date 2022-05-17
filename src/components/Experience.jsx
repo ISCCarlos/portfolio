@@ -6,7 +6,7 @@ import ExperienceDetail from "./ExperienceDetail";
 const experiences = [
   {
     label: "Zuma TI",
-    role: "Analista programador",
+    role: "Developer analyst",
     years: "2015 - 2016",
     description:
       "Coding and testing COBOL programs for CitiBanamex clients system.",
@@ -45,6 +45,7 @@ const Experience = () => {
               role={experience.role}
               years={experience.years}
               description={experience.description}
+              technologies={experience.technologies}
             />
           </Grid>
         ))}

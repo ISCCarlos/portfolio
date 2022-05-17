@@ -1,14 +1,15 @@
 import { Paper, Typography } from "@mui/material";
 import React from "react";
-import SwipeableTextMobileStepper from "./ProjectDetail";
+import ProjectDetail from "./ProjectDetail";
+import TopicIcon from "@mui/icons-material/Topic";
 
 const Projects = () => {
   return (
-    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="projects">
+    <Paper sx={{ maxWidth: "98%", margin: "1%", pb: 3 }} id="projects">
       <Typography variant="h3" sx={{ m: 3 }}>
-        Projects
+        <TopicIcon /> Projects
       </Typography>
-      <SwipeableTextMobileStepper />
+      <ProjectDetail />
     </Paper>
   );
 };
