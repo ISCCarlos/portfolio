@@ -211,7 +211,7 @@ const Skills = () => {
   };
 
   return (
-    <Paper sx={{ maxWidth: "95%", margin: 6 }}>
+    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="skills">
       <Typography variant="h3" sx={{ m: 3 }}>
         Skills
       </Typography>

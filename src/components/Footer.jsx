@@ -1,14 +1,59 @@
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
+  Link,
+} from "@mui/material";
 import React from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Footer = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#3F51B5"
-        fill-opacity="1"
-        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
+    <Box sx={{ padding: 2 }}>
+      <BottomNavigation>
+        <BottomNavigationAction
+          label="View LinkedIn profile"
+          icon={
+            <Link
+              href="https://www.linkedin.com/in/carlos-giovanni-ch%C3%A1vez-arias-5502b3212/"
+              target="_blank"
+            >
+              <LinkedInIcon />
+            </Link>
+          }
+        />
+        <BottomNavigationAction
+          label="View GitHub repo"
+          icon={
+            <Link href="https://github.com/ISCCarlos" target="_blank">
+              <GitHubIcon />
+            </Link>
+          }
+        />
+        <BottomNavigationAction
+          label="Send me a Telegram"
+          icon={
+            <Link href="https://t.me/carlos_chavez" target="_blank">
+              <TelegramIcon />
+            </Link>
+          }
+        />
+        <BottomNavigationAction
+          label="Send me a WhatsApp"
+          icon={
+            <Link
+              href="https://wa.me/15554747918/?text=Carlos%20Chavez"
+              target="_blank"
+            >
+              <WhatsAppIcon />
+            </Link>
+          }
+        />
+      </BottomNavigation>
+    </Box>
   );
 };
 

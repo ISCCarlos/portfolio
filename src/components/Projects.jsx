@@ -4,7 +4,7 @@ import SwipeableTextMobileStepper from "./ProjectDetail";
 
 const Projects = () => {
   return (
-    <Paper sx={{ maxWidth: "95%", margin: 6 }}>
+    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="projects">
       <Typography variant="h3" sx={{ m: 3 }}>
         Projects
       </Typography>

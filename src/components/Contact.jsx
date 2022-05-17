@@ -1,13 +1,9 @@
-import { Paper, Typography, Box, Link } from "@mui/material";
+import { Paper, Typography, Box, Button } from "@mui/material";
 import React from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Contact = () => {
   return (
-    <Paper sx={{ maxWidth: "95%", margin: 6 }}>
+    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="contact">
       <Typography variant="h3" sx={{ m: 3 }}>
         Contact
       </Typography>
@@ -18,26 +14,34 @@ const Contact = () => {
           marginLeft: { xs: "none", md: "25%" },
         }}
       >
-        <Link href="#">
-          <LinkedInIcon
-            sx={{ fontSize: { xs: 60, md: 100 }, margin: { xs: 1, md: 6 } }}
-          />
-        </Link>
-        <Link href="#">
-          <GitHubIcon
-            sx={{ fontSize: { xs: 60, md: 100 }, margin: { xs: 1, md: 6 } }}
-          />
-        </Link>
-        <Link href="#">
-          <TelegramIcon
-            sx={{ fontSize: { xs: 60, md: 100 }, margin: { xs: 1, md: 6 } }}
-          />
-        </Link>
-        <Link href="#">
-          <WhatsAppIcon
-            sx={{ fontSize: { xs: 60, md: 100 }, margin: { xs: 1, md: 6 } }}
-          />
-        </Link>
+        <form>
+          <Box sx={{ mb: 1, mt: 0.5 }}>
+            <input type="text" name="name" id="name" placeholder="Name" />
+          </Box>
+          <Box sx={{ mb: 1, mt: 0.5 }}>
+            <input type="email" name="mail" id="mail" placeholder="Email" />
+          </Box>
+          <Box sx={{ mb: 1, mt: 0.5 }}>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone number"
+            />
+          </Box>
+          <Box sx={{ mb: 1, mt: 0.5 }}>
+            <textarea
+              name="moreInfo"
+              id="moreInfo"
+              cols="30"
+              rows="10"
+              placeholder="Tell me more about your project, job offer or something interesting ..."
+            ></textarea>
+          </Box>
+          <Button variant="contained" sx={{ mb: 1, mt: 1 }}>
+            Submit
+          </Button>
+        </form>
       </Box>
     </Paper>
   );

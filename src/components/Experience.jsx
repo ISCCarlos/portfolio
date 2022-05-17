@@ -1,4 +1,5 @@
 import { Grid, Paper, Typography } from "@mui/material";
+import WorkIcon from "@mui/icons-material/Work";
 import React from "react";
 import ExperienceDetail from "./ExperienceDetail";
 
@@ -23,15 +24,20 @@ const experiences = [
   },
 ];
 
+let size =
+  Math.ceil(12 / experiences.length) < 3
+    ? 3
+    : Math.ceil(12 / experiences.length);
+
 const Experience = () => {
   return (
-    <Paper sx={{ maxWidth: "95%", margin: 6 }}>
+    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="experience">
       <Typography variant="h3" sx={{ m: 3 }}>
-        Experience
+        <WorkIcon /> Experience
       </Typography>
       <Grid container>
         {experiences.map((experience) => (
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={size}>
             <ExperienceDetail
               img={experience.img}
               industry={experience.industry}
