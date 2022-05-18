@@ -12,37 +12,25 @@ const images = [
     label: "My portfolio",
     imgPath: "../../assets/icons/projects/portfolio.png",
     url: "https://luminous-sprinkles-9f065e.netlify.app/",
-  },
-  /*{ label: "Medical Assitant", imgPath: "" },*/
-  {
-    label: "BY private project",
-    imgPath: "../../assets/icons/projects/portfolio.png",
-    url: "",
+    technologies: "React",
   },
   {
-    label: "Honeywell private project",
-    imgPath: "../../assets/icons/projects/portfolio.png",
+    label: "BY's private project",
+    imgPath: "../../assets/icons/projects/by.png",
     url: "",
+    technologies: "React, Spring",
   },
   {
-    label: "Netlogistik private projects",
-    imgPath: "../../assets/icons/projects/portfolio.png",
+    label: "Honeywell's private project",
+    imgPath: "../../assets/icons/projects/hn.png",
     url: "",
+    technologies: "Python, Spring",
   },
   {
-    label: "Netlogistik private projects",
-    imgPath: "../../assets/icons/projects/portfolio.png",
+    label: "Netlogistik's private projects",
+    imgPath: "../../assets/icons/projects/nl.png",
     url: "",
-  },
-  {
-    label: "Netlogistik private projects",
-    imgPath: "../../assets/icons/projects/portfolio.png",
-    url: "",
-  },
-  {
-    label: "Netlogistik private projects",
-    imgPath: "../../assets/icons/projects/portfolio.png",
-    url: "",
+    technologies: "Angular, Yii, Ionic, Bootstrap",
   },
 ];
 
@@ -60,14 +48,18 @@ const ProjectDetail = () => {
         {images.map((image) => {
           return (
             <ImageListItem key={image.label}>
-              <img src={`${image.imgPath}`} alt={image.label} loading="lazy" />
+              <img src={`${image.imgPath}`} alt="" loading="lazy" />
               <Link
                 href={image.url}
                 target="_blank"
                 color="inherit"
                 underline="none"
               >
-                <ImageListItemBar position="below" title={image.label} />
+                <ImageListItemBar
+                  position="below"
+                  title={image.label}
+                  subtitle={image.technologies}
+                />
               </Link>
             </ImageListItem>
           );

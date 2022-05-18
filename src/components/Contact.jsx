@@ -1,48 +1,50 @@
-import { Paper, Typography, Box, Button } from "@mui/material";
+import { Paper, Typography, Button, Input, Box } from "@mui/material";
 import React from "react";
 import MailIcon from "@mui/icons-material/Mail";
 
 const Contact = () => {
   return (
-    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="contact">
+    <Paper
+      sx={{ maxWidth: "98%", margin: "1%", justifyItems: "center" }}
+      id="contact"
+    >
       <Typography variant="h3" sx={{ m: 3 }}>
         <MailIcon /> Contact
       </Typography>
-
       <Box
-        sx={{
-          width: { xs: "100%", md: "50%" },
-          marginLeft: { xs: "none", md: "25%" },
-        }}
+        sx={{ width: "90%", maxWidth: "90%", ml: "5%", textAlign: "center" }}
       >
-        <form>
-          <Box sx={{ mb: 1, mt: 0.5 }}>
-            <input type="text" name="name" id="name" placeholder="Name" />
-          </Box>
-          <Box sx={{ mb: 1, mt: 0.5 }}>
-            <input type="email" name="mail" id="mail" placeholder="Email" />
-          </Box>
-          <Box sx={{ mb: 1, mt: 0.5 }}>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="Phone number"
-            />
-          </Box>
-          <Box sx={{ mb: 1, mt: 0.5 }}>
-            <textarea
-              name="moreInfo"
-              id="moreInfo"
-              cols="30"
-              rows="10"
-              placeholder="Tell me more about your project, job offer or something interesting ..."
-            ></textarea>
-          </Box>
-          <Button variant="contained" sx={{ mb: 1, mt: 1 }}>
-            Submit
-          </Button>
-        </form>
+        <Input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+          sx={{ m: 1 }}
+        />
+        <Input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="Email"
+          sx={{ m: 1 }}
+        />
+        <Input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Phone number"
+          sx={{ m: 1 }}
+        />
+      </Box>
+      <Box
+        sx={{ width: "90%", maxWidth: "90%", ml: "5%", textAlign: "center" }}
+      >
+        <Button variant="contained" sx={{ m: 1 }}>
+          Submit
+        </Button>
+        <Button variant="outlined" sx={{ m: 1 }}>
+          Get my CV
+        </Button>
       </Box>
     </Paper>
   );

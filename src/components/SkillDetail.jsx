@@ -1,26 +1,6 @@
-import {
-  Avatar,
-  Box,
-  Grid,
-  LinearProgress,
-  linearProgressClasses,
-  styled,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
-
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 10,
-  borderRadius: 5,
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor:
-      theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
-  },
-  [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 5,
-    backgroundColor: theme.palette.mode === "light" ? "#1a90ff" : "#308fe8",
-  },
-}));
+import BorderLinearProgress from "./common/BorderLinearProgress";
 
 const SkillDetail = ({ name, icon, color, level }) => {
   const levelByValue = (value) => {
@@ -58,7 +38,7 @@ const SkillDetail = ({ name, icon, color, level }) => {
         <Grid item xs={12} sm={10}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box sx={{ width: "100%", mr: 1, ml: 1 }}>
-              <BorderLinearProgress variant="determinate" value={level} />
+              <BorderLinearProgress level={level} />
             </Box>
             <Box sx={{ minWidth: 35 }}>
               <Typography variant="body2" color="text.secondary">
