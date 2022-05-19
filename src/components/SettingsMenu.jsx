@@ -19,7 +19,6 @@ const SettingsMenu = () => {
   const [translations, i18n] = useTranslation("global");
   const [anchorEl, setAnchorEl] = useState(null);
   const [faceParam, setFaceParam] = useLocalStorage("faceParam", false);
-  const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
 
   const isMenuOpen = Boolean(anchorEl);
 
@@ -29,11 +28,6 @@ const SettingsMenu = () => {
 
   const handleMenuClose = () => {
     setAnchorEl(null);
-  };
-
-  const handleThemeChange = () => {
-    setDarkMode(!darkMode);
-    window.location.reload();
   };
 
   const handleShowFaceChange = () => {
@@ -63,12 +57,6 @@ const SettingsMenu = () => {
         open={isMenuOpen}
         onClose={handleMenuClose}
       >
-        <MenuItem>
-          <FormControlLabel
-            control={<Switch onChange={handleThemeChange} checked={darkMode} />}
-            label={translations("header.settings.darkMode")}
-          />
-        </MenuItem>
         <MenuItem>
           <FormControlLabel
             control={

@@ -28,14 +28,14 @@ const Contact = () => {
           type="email"
           name="mail"
           id="mail"
-          placeholder={translations("contact.name")}
+          placeholder={translations("contact.email")}
           sx={{ m: 1 }}
         />
         <Input
           type="tel"
           name="phone"
           id="phone"
-          placeholder={translations("contact.name")}
+          placeholder={translations("contact.phone")}
           sx={{ m: 1 }}
         />
       </Box>
