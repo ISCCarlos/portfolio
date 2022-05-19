@@ -32,7 +32,10 @@ const Experience = () => {
   const [translations] = useTranslation("global");
 
   return (
-    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="experience">
+    <Paper
+      sx={{ maxWidth: "98%", margin: "1%", background: "#fafafa" }}
+      id="experience"
+    >
       <Typography variant="h3" sx={{ m: 3 }}>
         <WorkIcon /> {translations("experience.title")}
       </Typography>

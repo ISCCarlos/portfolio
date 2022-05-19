@@ -8,7 +8,12 @@ const Contact = () => {
 
   return (
     <Paper
-      sx={{ maxWidth: "98%", margin: "1%", justifyItems: "center" }}
+      sx={{
+        maxWidth: "98%",
+        margin: "1%",
+        justifyItems: "center",
+        background: "#fafafa",
+      }}
       id="contact"
     >
       <Typography variant="h3" sx={{ m: 3 }}>

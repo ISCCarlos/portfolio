@@ -220,7 +220,10 @@ const Skills = () => {
   };
 
   return (
-    <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="skills">
+    <Paper
+      sx={{ maxWidth: "98%", margin: "1%", background: "#fafafa" }}
+      id="skills"
+    >
       <Typography variant="h3" sx={{ m: 3 }}>
         <SchoolIcon /> {translations("skills.title")}
       </Typography>

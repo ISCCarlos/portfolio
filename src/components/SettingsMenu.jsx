@@ -41,7 +41,7 @@ const SettingsMenu = () => {
   };
 
   const renderMenu = (
-    <Paper>
+    <Paper sx={{ background: "#fafafa" }}>
       <Menu
         anchorEl={anchorEl}
         anchorOrigin={{
