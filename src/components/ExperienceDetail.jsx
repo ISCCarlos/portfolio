@@ -8,6 +8,7 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const ExperienceDetail = ({
   img,
@@ -16,8 +17,9 @@ const ExperienceDetail = ({
   role,
   years,
   description,
-  technologies,
 }) => {
+  const [translations] = useTranslation("global");
+
   return (
     <Card sx={{ m: 2 }}>
       <CardActionArea>
@@ -27,20 +29,20 @@ const ExperienceDetail = ({
             {label}
           </Typography>
           <Typography variant="subtitle1" sx={{ fontStyle: "italic" }}>
-            {role}
+            {translations(role)}
           </Typography>
           <Typography variant="subtitle2" sx={{ fontStyle: "italic" }}>
             {years}
           </Typography>
           <hr />
           <Typography variant="body2" color="text.secondary">
-            {description}
+            {translations(description)}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Chip
-          label={"Industry: " + industry}
+          label={translations(industry)}
           color="primary"
           variant="outlined"
         />

@@ -1,0 +1,75 @@
+{
+  "common": {
+    "advanced": "Avanzado",
+    "back": "Regresar",
+    "continue": "Continuar",
+    "english": "Inglés",
+    "expert": "Experto",
+    "finish": "Finalizar",
+    "intermediate": "Intermedio",
+    "private": "Privado",
+    "public": "Público",
+    "rookie": "Novato",
+    "spanish": "Español"
+  },
+  "contact": {
+    "cv": "Descarga mi CV",
+    "email": "Correo electrónico",
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "submit": "Enviar",
+    "title": "Contacto"
+  },
+  "experience": {
+    "netlogistik": {
+      "description": "Codificación e implementación de sistemas para la cadena de suministro, trabajando con líderes de la industria como Honeywell, BlueYonder y la suite propia de NetLogistik SupplyNet.",
+      "industry": "Industria: Logística",
+      "role": "Sr. Software developer"
+    },
+    "title": "Experiencia",
+    "zuma": {
+      "description": "Codificación y pruebas de programas COBOL para el sistema de clientes de CitiBanamex.",
+      "industry": "Industria: Banca",
+      "role": "Analista programador"
+    }
+  },
+  "footer": {
+    "github": "Ir a mi respositorio de Github",
+    "linkedin": "Visita mi LinkedIn",
+    "telegram": "Enviar un Telegram"
+  },
+  "header": {
+    "title": "Portafolio <CCA />",
+    "settings": {
+      "darkMode": "Modo oscuro",
+      "language": "Idioma",
+      "showFace": "Mostrar mi cara",
+      "title": "Configuraciones"
+    }
+  },
+  "landing": {
+    "aboutMeContent": "Soy un entusiasta de la tecnologia, me gusta la inovación y la estabilidad de los proyectos de software, amante de los retos.",
+    "aboutMeTitle": "Sobre mi",
+    "location": "Ciudad de México",
+    "toggleImages": "Mostar mi rostro"
+  },
+  "projects": {
+    "details": {
+      "by": "Proyecto de BY",
+      "hon": "Proyecto de Honeywell",
+      "nl": "Proyectos de NetLogistik",
+      "portfolio": "Mi portafolio"
+    },
+    "title": "Proyectos"
+  },
+  "skills": {
+    "dataBase": "Base de datos",
+    "frameworks": "Frameworks",
+    "infrastructure": "Infraestructura",
+    "languages": "Idiomas",
+    "operativeSystems": "Sistemas operativos",
+    "programmingLanguages": "Lenguajes de programación",
+    "title": "Habilidades",
+    "versioning": "Gestores de versionamiento"
+  }
+}

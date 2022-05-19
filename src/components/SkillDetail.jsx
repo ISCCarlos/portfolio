@@ -1,22 +1,25 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import BorderLinearProgress from "./common/BorderLinearProgress";
+import { useTranslation } from "react-i18next";
 
 const SkillDetail = ({ name, icon, color, level }) => {
+  const [translations] = useTranslation("global");
+
   const levelByValue = (value) => {
     let result = "ND";
     switch (value) {
       case 100:
-        result = "Expert";
+        result = "common.expert";
         break;
       case 75:
-        result = "Advanced";
+        result = "common.advanced";
         break;
       case 50:
-        result = "Intermediate";
+        result = "common.intermediate";
         break;
       default:
-        result = "inherit";
+        result = "common.rookie";
         break;
     }
     return result;
@@ -42,7 +45,7 @@ const SkillDetail = ({ name, icon, color, level }) => {
             </Box>
             <Box sx={{ minWidth: 35 }}>
               <Typography variant="body2" color="text.secondary">
-                {levelByValue(level)}
+                {translations(levelByValue(level))}
               </Typography>
             </Box>
           </Box>

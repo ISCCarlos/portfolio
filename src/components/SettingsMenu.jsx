@@ -8,12 +8,17 @@ import {
   NativeSelect,
   Paper,
   Switch,
+  Tooltip,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useLocalStorage } from "./common/useLocalStorage";
 
 const SettingsMenu = () => {
+  const [translations, i18n] = useTranslation("global");
   const [anchorEl, setAnchorEl] = useState(null);
+  const [faceParam, setFaceParam] = useLocalStorage("faceParam", false);
 
   const isMenuOpen = Boolean(anchorEl);
 
@@ -27,7 +32,15 @@ const SettingsMenu = () => {
 
   const handleThemeChange = () => {};
 
-  const handleLanguageChange = () => {};
+  const handleShowFaceChange = () => {
+    setFaceParam(!faceParam);
+    window.location.reload();
+  };
+
+  const handleLanguageChange = () => {
+    const value = document.getElementById("language").value;
+    i18n.changeLanguage(value);
+  };
 
   const renderMenu = (
     <Paper>
@@ -49,21 +62,29 @@ const SettingsMenu = () => {
         <MenuItem>
           <FormControlLabel
             control={<Switch onChange={handleThemeChange} />}
-            label="Dark mode"
+            label={translations("header.settings.darkMode")}
+          />
+        </MenuItem>
+        <MenuItem>
+          <FormControlLabel
+            control={
+              <Switch onChange={handleShowFaceChange} checked={faceParam} />
+            }
+            label={translations("header.settings.showFace")}
           />
         </MenuItem>
         <MenuItem>
           <FormControl fullWidth>
             <InputLabel variant="standard" htmlFor="language">
-              Language
+              {translations("header.settings.language")}
             </InputLabel>
             <NativeSelect
               id="language"
               onChange={handleLanguageChange}
-              defaultValue={"en_US"}
+              defaultValue={i18n.language}
             >
-              <option value="en_US">English</option>
-              <option value="es_MX">Spanish</option>
+              <option value="en">{translations("common.english")}</option>
+              <option value="es">{translations("common.spanish")}</option>
             </NativeSelect>
           </FormControl>
         </MenuItem>
@@ -73,17 +94,20 @@ const SettingsMenu = () => {
 
   return (
     <>
-      <IconButton
-        size="large"
-        edge="end"
-        aria-label="menu"
-        aria-controls="settings-menu"
-        aria-haspopup="true"
-        onClick={handleMenuOpen}
-        color="inherit"
-      >
-        <SettingsIcon />
-      </IconButton>
+      <Tooltip title={translations("header.settings.title")}>
+        <IconButton
+          size="large"
+          edge="end"
+          aria-label="menu"
+          aria-controls="settings-menu"
+          aria-haspopup="true"
+          onClick={handleMenuOpen}
+          color="inherit"
+        >
+          <SettingsIcon />
+        </IconButton>
+      </Tooltip>
+
       {renderMenu}
     </>
   );

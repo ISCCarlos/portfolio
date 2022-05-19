@@ -11,10 +11,11 @@ import {
 } from "@mui/material";
 import SkillDetail from "./SkillDetail";
 import SchoolIcon from "@mui/icons-material/School";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   {
-    label: "Programming languages",
+    label: "skills.programmingLanguages",
     description: [
       {
         name: "Python",
@@ -73,7 +74,7 @@ const skills = [
     ],
   },
   {
-    label: "Frameworks",
+    label: "skills.frameworks",
     description: [
       {
         name: "Yii",
@@ -114,7 +115,7 @@ const skills = [
     ],
   },
   {
-    label: "Data bases",
+    label: "skills.dataBase",
     description: [
       {
         name: "MS SQL Server",
@@ -137,7 +138,7 @@ const skills = [
     ],
   },
   {
-    label: "Infrastructure",
+    label: "skills.infrastructure",
     description: [
       {
         name: "Azure",
@@ -148,7 +149,7 @@ const skills = [
     ],
   },
   {
-    label: "Versioning",
+    label: "skills.versioning",
     description: [
       {
         name: "Github",
@@ -165,7 +166,7 @@ const skills = [
     ],
   },
   {
-    label: "Operative systems",
+    label: "skills.operativeSystems",
     description: [
       {
         name: "Windows",
@@ -188,7 +189,7 @@ const skills = [
     ],
   },
   {
-    label: "Languages",
+    label: "skills.languages",
     description: [
       {
         name: "Español",
@@ -207,6 +208,7 @@ const skills = [
 ];
 
 const Skills = () => {
+  const [translations] = useTranslation("global");
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
@@ -220,12 +222,12 @@ const Skills = () => {
   return (
     <Paper sx={{ maxWidth: "98%", margin: "1%" }} id="skills">
       <Typography variant="h3" sx={{ m: 3 }}>
-        <SchoolIcon /> Skills
+        <SchoolIcon /> {translations("skills.title")}
       </Typography>
       <Stepper activeStep={activeStep} orientation="vertical" sx={{ m: 3 }}>
         {skills.map((skill, index) => (
-          <Step key={skill.label}>
-            <StepLabel>{skill.label}</StepLabel>
+          <Step key={translations(skill.label)}>
+            <StepLabel>{translations(skill.label)}</StepLabel>
             <StepContent>
               {skill.description.map((element) => (
                 <SkillDetail
@@ -242,14 +244,16 @@ const Skills = () => {
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
+                    {translations("common.back")}
                   </Button>
                   <Button
                     variant="contained"
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === skills.length - 1 ? "Finish" : "Continue"}
+                    {index === skills.length - 1
+                      ? translations("common.finish")
+                      : translations("common.continue")}
                   </Button>
                 </div>
               </Box>

@@ -1,0 +1,75 @@
+{
+  "common": {
+    "advanced": "Advanced",
+    "back": "Back",
+    "continue": "Continue",
+    "english": "English",
+    "expert": "Expert",
+    "finish": "Finish",
+    "intermediate": "Intermediate",
+    "private": "Private",
+    "public": "Public",
+    "rookie": "Rookie",
+    "spanish": "Spanish"
+  },
+  "contact": {
+    "cv": "Get my CV",
+    "email": "Email",
+    "name": "Name",
+    "phone": "Phone",
+    "submit": "Submit",
+    "title": "Contact"
+  },
+  "experience": {
+    "netlogistik": {
+      "description": "Coding and implementing systems for supply chain, working with industry leaders as Honeywell, BlueYonder and Supplynet from NetLogistik.",
+      "industry": "Industry: Logistics",
+      "role": "Sr. Software developer"
+    },
+    "title": "Experience",
+    "zuma": {
+      "description": "Coding and testing COBOL programs for CitiBanamex clients system.",
+      "industry": "Industry: Banking",
+      "role": "Developer analyst"
+    }
+  },
+  "footer": {
+    "github": "View my Github repo",
+    "linkedin": "Visit my LinkedIn profile",
+    "telegram": "Send me a Telegram"
+  },
+  "header": {
+    "title": "<CCA /> Portfolio",
+    "settings": {
+      "darkMode": "Dark mode",
+      "language": "Language",
+      "showFace": "Show my face",
+      "title": "Settings"
+    }
+  },
+  "landing": {
+    "aboutMeContent": "I'm a technology lover, I like innovation and stability in software products. A lover of new challenges.",
+    "aboutMeTitle": "About me",
+    "location": "Mexico City",
+    "toggleImages": "Show my face"
+  },
+  "projects": {
+    "details": {
+      "by": "BY's project",
+      "hon": "Honeywell's project",
+      "nl": "NetLogistik's projects",
+      "portfolio": "My portfolio"
+    },
+    "title": "Projects"
+  },
+  "skills": {
+    "dataBase": "Data base",
+    "frameworks": "Frameworks",
+    "infrastructure": "Infrastructure",
+    "languages": "Languages",
+    "operativeSystems": "Operative systems",
+    "programmingLanguages": "Programming languages",
+    "title": "Skills",
+    "versioning": "Versioning"
+  }
+}

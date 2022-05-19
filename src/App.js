@@ -14,7 +14,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Header />
-        <Landing image={"../../assets/icons/CCA.png"} />
+        <Landing />
         <Experience />
         <Skills />
         <Projects />

@@ -6,35 +6,42 @@ import {
   Link,
 } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const images = [
   {
-    label: "My portfolio",
+    label: "projects.details.portfolio",
     imgPath: "../../assets/icons/projects/portfolio.png",
     url: "https://luminous-sprinkles-9f065e.netlify.app/",
+    visibility: "common.public",
     technologies: "React",
   },
   {
-    label: "BY's private project",
+    label: "projects.details.by",
     imgPath: "../../assets/icons/projects/by.png",
-    url: "",
+    url: "#",
+    visibility: "common.private",
     technologies: "React, Spring",
   },
   {
-    label: "Honeywell's private project",
+    label: "projects.details.hon",
     imgPath: "../../assets/icons/projects/hn.png",
-    url: "",
+    url: "#",
+    visibility: "common.private",
     technologies: "Python, Spring",
   },
   {
-    label: "Netlogistik's private projects",
+    label: "projects.details.nl",
     imgPath: "../../assets/icons/projects/nl.png",
-    url: "",
+    url: "#",
+    visibility: "common.private",
     technologies: "Angular, Yii, Ionic, Bootstrap",
   },
 ];
 
 const ProjectDetail = () => {
+  const [translations] = useTranslation("global");
+
   return (
     <Box
       sx={{
@@ -44,10 +51,14 @@ const ProjectDetail = () => {
         overflowY: "scroll",
       }}
     >
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <ImageList
+        variant="masonry"
+        cols={images.length % 2 === 0 ? 2 : 3}
+        gap={8}
+      >
         {images.map((image) => {
           return (
-            <ImageListItem key={image.label}>
+            <ImageListItem key={translations(image.label)}>
               <img src={`${image.imgPath}`} alt="" loading="lazy" />
               <Link
                 href={image.url}
@@ -57,8 +68,13 @@ const ProjectDetail = () => {
               >
                 <ImageListItemBar
                   position="below"
-                  title={image.label}
-                  subtitle={image.technologies}
+                  title={translations(image.label)}
+                  subtitle={
+                    "[" +
+                    translations(image.visibility) +
+                    "]  " +
+                    image.technologies
+                  }
                 />
               </Link>
             </ImageListItem>

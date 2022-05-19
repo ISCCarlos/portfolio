@@ -1,8 +1,25 @@
-import { Avatar, Box, Grid, IconButton, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Grid,
+  IconButton,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { useLocalStorage } from "./common/useLocalStorage";
 
-const Landing = ({ image }) => {
+const Landing = () => {
+  const [translations] = useTranslation("global");
+  const [faceParam] = useLocalStorage("faceParam");
+
+  const logo = "../../assets/icons/CCA.png";
+  const face = "../../assets/me.jpg";
+
+  const image = faceParam ? face : logo;
+
   return (
     <>
       <Box
@@ -20,17 +37,19 @@ const Landing = ({ image }) => {
         >
           <Grid container>
             <Grid item xs={12} md={4}>
-              <Avatar
-                alt="<CCA />"
-                src={image}
-                sx={{
-                  width: "90%",
-                  height: "90%",
-                  display: { xs: "inline-block", md: "block" },
-                  mt: { xs: 1, md: 3 },
-                  ml: { xs: "5%", md: 3 },
-                }}
-              />
+              <Tooltip title={translations("landing.toggleImages")}>
+                <Avatar
+                  alt="<CCA />"
+                  src={image}
+                  sx={{
+                    width: "90%",
+                    height: "90%",
+                    display: { xs: "inline-block", md: "block" },
+                    mt: { xs: 1, md: 3 },
+                    ml: { xs: "5%", md: 3 },
+                  }}
+                />
+              </Tooltip>
             </Grid>
             <Grid item xs={12} md={8}>
               <Box
@@ -68,22 +87,21 @@ const Landing = ({ image }) => {
                   <IconButton>
                     <LocationOnIcon sx={{ color: "lightBlue" }} />
                   </IconButton>
-                  Mexico City
+                  {translations("landing.location")}
                 </Typography>
                 <Typography
                   variant="subtitle2"
                   color="white"
                   sx={{ textShadow: "2px 2px black" }}
                 >
-                  About me
+                  {translations("landing.aboutMeTitle")}
                 </Typography>
                 <Typography
                   variant="body2"
                   sx={{ color: "white", textShadow: "2px 2px black" }}
                   wrap
                 >
-                  I'm a technology lover, I like innovation and stability in
-                  software products. A lover of new challenges.
+                  {translations("landing.aboutMeContent")}
                 </Typography>
               </Box>
             </Grid>

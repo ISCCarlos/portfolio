@@ -1,15 +1,18 @@
 import { Paper, Typography, Button, Input, Box } from "@mui/material";
 import React from "react";
 import MailIcon from "@mui/icons-material/Mail";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const [translations] = useTranslation("global");
+
   return (
     <Paper
       sx={{ maxWidth: "98%", margin: "1%", justifyItems: "center" }}
       id="contact"
     >
       <Typography variant="h3" sx={{ m: 3 }}>
-        <MailIcon /> Contact
+        <MailIcon /> {translations("contact.title")}
       </Typography>
       <Box
         sx={{ width: "90%", maxWidth: "90%", ml: "5%", textAlign: "center" }}
@@ -18,21 +21,21 @@ const Contact = () => {
           type="text"
           name="name"
           id="name"
-          placeholder="Name"
+          placeholder={translations("contact.name")}
           sx={{ m: 1 }}
         />
         <Input
           type="email"
           name="mail"
           id="mail"
-          placeholder="Email"
+          placeholder={translations("contact.name")}
           sx={{ m: 1 }}
         />
         <Input
           type="tel"
           name="phone"
           id="phone"
-          placeholder="Phone number"
+          placeholder={translations("contact.name")}
           sx={{ m: 1 }}
         />
       </Box>
@@ -40,10 +43,10 @@ const Contact = () => {
         sx={{ width: "90%", maxWidth: "90%", ml: "5%", textAlign: "center" }}
       >
         <Button variant="contained" sx={{ m: 1 }}>
-          Submit
+          {translations("contact.submit")}
         </Button>
         <Button variant="outlined" sx={{ m: 1 }}>
-          Get my CV
+          {translations("contact.cv")}
         </Button>
       </Box>
     </Paper>
