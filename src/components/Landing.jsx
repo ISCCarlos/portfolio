@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import React from "react";
-import { useTranslation } from "./dependencies/react-i18next";
+import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "./common/useLocalStorage";
 
 const Landing = () => {

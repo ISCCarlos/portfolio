@@ -8,7 +8,7 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
-import { useTranslation } from "./dependencies/react-i18next";
+import { useTranslation } from "react-i18next";
 
 const ExperienceDetail = ({
   img,

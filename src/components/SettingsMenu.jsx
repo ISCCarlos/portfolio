@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import React, { useState } from "react";
-import { useTranslation } from "./dependencies/react-i18next";
+import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "./common/useLocalStorage";
 
 const SettingsMenu = () => {

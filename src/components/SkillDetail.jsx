@@ -1,7 +1,7 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import BorderLinearProgress from "./common/BorderLinearProgress";
-import { useTranslation } from "./dependencies/react-i18next";
+import { useTranslation } from "react-i18next";
 
 const SkillDetail = ({ name, icon, color, level }) => {
   const [translations] = useTranslation("global");

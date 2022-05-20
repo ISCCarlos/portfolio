@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import SkillDetail from "./SkillDetail";
 import SchoolIcon from "@mui/icons-material/School";
-import { useTranslation } from "./dependencies/react-i18next";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   {
