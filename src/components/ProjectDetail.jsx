@@ -11,29 +11,29 @@ import { useTranslation } from "react-i18next";
 const images = [
   {
     label: "projects.details.portfolio",
-    imgPath: "../../assets/icons/projects/portfolio.png",
-    url: "https://luminous-sprinkles-9f065e.netlify.app/",
+    imgPath: "../../assets/icons/CCA.png",
+    url: "https://cca-portfolio.netlify.app/",
     visibility: "common.public",
     technologies: "React",
   },
   {
     label: "projects.details.by",
     imgPath: "../../assets/icons/projects/by.png",
-    url: "#",
+    url: "",
     visibility: "common.private",
     technologies: "React, Spring",
   },
   {
     label: "projects.details.hon",
     imgPath: "../../assets/icons/projects/hn.png",
-    url: "#",
+    url: "",
     visibility: "common.private",
     technologies: "Python, Spring",
   },
   {
     label: "projects.details.nl",
     imgPath: "../../assets/icons/projects/nl.png",
-    url: "#",
+    url: "",
     visibility: "common.private",
     technologies: "Angular, Yii, Ionic, Bootstrap",
   },
@@ -59,7 +59,12 @@ const ProjectDetail = () => {
         {images.map((image) => {
           return (
             <ImageListItem key={translations(image.label)}>
-              <img src={`${image.imgPath}`} alt="" loading="lazy" />
+              <img
+                src={`${image.imgPath}`}
+                srcSet={`${image.imgPath}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt=""
+                loading="lazy"
+              />
               <Link
                 href={image.url}
                 target="_blank"

@@ -22,13 +22,13 @@
   },
   "experience": {
     "netlogistik": {
-      "description": "Coding and implementing systems for supply chain, working with industry leaders as Honeywell, BlueYonder and Supplynet from NetLogistik.",
+      "description": "Develop and implementing systems for supply chain, working with industry leaders as Honeywell, BlueYonder and Supplynet from NetLogistik.",
       "industry": "Industry: Logistics",
       "role": "Sr. Software developer"
     },
     "title": "Experience",
     "zuma": {
-      "description": "Coding and testing COBOL programs for CitiBanamex clients system.",
+      "description": "Develop and testing COBOL programs for CitiBanamex clients system.",
       "industry": "Industry: Banking",
       "role": "Developer analyst"
     }

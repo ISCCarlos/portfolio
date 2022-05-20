@@ -2,9 +2,18 @@ import { Paper, Typography, Button, Input, Box } from "@mui/material";
 import React from "react";
 import MailIcon from "@mui/icons-material/Mail";
 import { useTranslation } from "react-i18next";
+import { saveAs } from "file-saver";
 
 const Contact = () => {
-  const [translations] = useTranslation("global");
+  const [translations, i18n] = useTranslation("global");
+
+  const getCV = () => {
+    const language = i18n.language;
+
+    const file = "../../assets/docs/" + language + "_CV.pdf";
+
+    saveAs(file, "CV.pdf");
+  };
 
   return (
     <Paper
@@ -50,7 +59,7 @@ const Contact = () => {
         <Button variant="contained" sx={{ m: 1 }}>
           {translations("contact.submit")}
         </Button>
-        <Button variant="outlined" sx={{ m: 1 }}>
+        <Button variant="outlined" sx={{ m: 1 }} onClick={getCV}>
           {translations("contact.cv")}
         </Button>
       </Box>
