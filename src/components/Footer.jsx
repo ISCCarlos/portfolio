@@ -9,7 +9,7 @@ import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "./dependencies/react-i18next";
 
 const Footer = () => {
   const [translations] = useTranslation("global");

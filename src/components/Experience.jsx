@@ -2,7 +2,7 @@ import { Grid, Paper, Typography } from "@mui/material";
 import WorkIcon from "@mui/icons-material/Work";
 import React from "react";
 import ExperienceDetail from "./ExperienceDetail";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "./dependencies/react-i18next";
 
 const experiences = [
   {
