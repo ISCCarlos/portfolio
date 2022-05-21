@@ -4,13 +4,18 @@
     "back": "Regresar",
     "continue": "Continuar",
     "english": "Inglés",
+    "errorSendMail": "¡Contacto no enviado!",
     "expert": "Experto",
     "finish": "Finalizar",
     "intermediate": "Intermedio",
+    "invalidMail": "El campo correo electrónico es invalido.",
+    "invalidName": "El campo nombre es inválido.",
+    "invalidPhone": "El campo teléfono es inválido.",
     "private": "Privado",
     "public": "Público",
     "rookie": "Novato",
-    "spanish": "Español"
+    "spanish": "Español",
+    "successMail": "¡Contacto enviado con éxito!"
   },
   "contact": {
     "cv": "Descarga mi CV",

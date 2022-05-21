@@ -4,13 +4,18 @@
     "back": "Back",
     "continue": "Continue",
     "english": "English",
+    "errorSendMail": "¡Error: Message not send!",
     "expert": "Expert",
     "finish": "Finish",
     "intermediate": "Intermediate",
+    "invalidMail": "Invalid e-mail.",
+    "invalidName": "Invalid name.",
+    "invalidPhone": "Invalid phone.",
     "private": "Private",
     "public": "Public",
     "rookie": "Rookie",
-    "spanish": "Spanish"
+    "spanish": "Spanish",
+    "successMail": "¡Successful send!"
   },
   "contact": {
     "cv": "Get my CV",
