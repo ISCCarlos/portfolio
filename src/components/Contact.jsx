@@ -23,10 +23,17 @@ const Contact = () => {
   const [alertSeverity, setAlertSeverity] = useState("warning");
   const [message, setMessage] = useState("");
 
+  /**
+   * When the user clicks the close button, the modal will close.
+   */
   const handleClose = () => {
     setOpen(false);
   };
 
+  /**
+   * When the user clicks on the button, the function will get the language from the i18n library, and
+   * then save the file with the name of the language and the extension .pdf
+   */
   const getCV = () => {
     const language = i18n.language;
 
@@ -35,6 +42,10 @@ const Contact = () => {
     saveAs(file, "CV.pdf");
   };
 
+  /**
+   * When the user clicks the button, the setOpen function is called, which sets the state of the open
+   * variable to true.
+   */
   const showAlert = () => {
     setOpen(true);
   };
@@ -43,6 +54,10 @@ const Contact = () => {
   const templateID = "template_92kulkn";
   const userID = "kfgV-GW04lXMbcHbX";
 
+  /**
+   * It checks if the input fields are empty, if they are, it shows an alert, if they aren't, it sends
+   * an email.
+   */
   const sendEmail = () => {
     let error = false;
     const fromName = document.getElementById("name").value;
