@@ -24,7 +24,7 @@ const Landing = () => {
     <>
       <Box
         sx={{
-          background: "url(../../assets/landing_bg.png)",
+          background: "url(../../assets/landing_bg.webp)",
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
